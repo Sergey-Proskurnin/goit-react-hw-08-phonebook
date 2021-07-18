@@ -1,0 +1,31 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+.span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+}
+.btnList {
+  cursor: pointer;
+  width: 70px;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008cba;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.btnList:hover,
+:focus {
+  color: #008cba;
+  background-color: white;
+}
