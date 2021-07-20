@@ -7,7 +7,7 @@ const getFilter = state => state.contacts.filter;
 const getAllContacts = state => state.contacts.items;
 
 const sortAllContact = createSelector([getAllContacts], contacts => {
-  return contacts.slice().sort((a, b) => b.id - a.id);
+  return contacts.slice().sort((a, b) => a.name.localeCompare(b.name));
 });
 const getVisibleContacts = createSelector(
   [sortAllContact, getFilter],

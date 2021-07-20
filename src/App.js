@@ -32,7 +32,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(PublicRoute);
     return (
       <div>
         <AppBar />
