@@ -1,3 +1,11 @@
+.listNav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 23px;
+}
+
 .link {
   display: inline-block;
   text-decoration: none;
@@ -6,6 +14,15 @@
   color: #2a363b;
 }
 
+.link:hover,
+.link:focus {
+  text-decoration-line: underline;
+}
+
 .activeLink {
   color: #e84a5f;
+}
+
+.ItemNav {
+  margin-right: 40px;
 }

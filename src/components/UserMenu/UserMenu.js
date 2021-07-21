@@ -1,21 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 import { getUserName, logOut } from 'redux/auth';
-// import defaultAvatar from './default-avatar.png';
+import defaultAvatar from 'images/guardsman.png';
 import s from './UserMenu.module.css';
 
-const UserMenu = ({ name, onLogout }) => (
+const UserMenu = ({ name, avatar, onLogout }) => (
   <div className={s.container}>
-    <img src="" alt="" width="32" className={s.avatar} />
-    <span className={s.name}>Welcome, {name}</span>
-    <button type="button" onClick={onLogout}>
+    <div>
+      <img src={avatar} alt="Avatar" width="57" className={s.avatar} />
+    </div>
+    <span className={s.name}>
+      Welcome, {name.slice(0, 1).toUpperCase()}
+      {name.slice(1)}
+    </span>
+    <Button
+      type="button"
+      onClick={onLogout}
+      style={{ marginTop: '5px' }}
+      variant="contained"
+      color="primary"
+    >
       Logout
-    </button>
+    </Button>
   </div>
 );
 const mapStateToProps = state => ({
   name: getUserName(state),
-  //   avatar: defaultAvatar,
+  avatar: defaultAvatar,
 });
 
 const mapDispatchToProps = {

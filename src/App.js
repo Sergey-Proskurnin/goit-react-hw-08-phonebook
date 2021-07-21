@@ -6,7 +6,7 @@ import AppBar from 'components/AppBar';
 // import RegisterView from 'views/RegisterView';
 // import LoginView from 'views/LoginView';
 import Container from './components/Container';
-import { getCurrentUser } from 'redux/auth';
+import { getCurrentUser, getFetchigCurrentUser } from 'redux/auth';
 import { connect } from 'react-redux';
 import routes from './routes';
 import PrivateRoute from 'components/PriveteRoute';
@@ -35,10 +35,18 @@ class App extends Component {
     return (
       <div>
         <AppBar />
-        <Container>
+        {/* <Container> */}
+        {this.props.isFetchigCurrentUser ? (
+          <OnLoader />
+        ) : (
           <Suspense fallback={<OnLoader />}>
             <Switch>
-              <PublicRoute exact path={routes.home} component={HomeView} />
+              <PublicRoute
+                exact
+                path={routes.home}
+                component={HomeView}
+                classN
+              />
               <PublicRoute
                 path={routes.register}
                 restricted
@@ -58,14 +66,19 @@ class App extends Component {
               />
             </Switch>
           </Suspense>
-        </Container>
+        )}
+        {/* </Container> */}
       </div>
     );
   }
 }
 
+const mapStateToProps = state => ({
+  isFetchigCurrentUser: getFetchigCurrentUser(state),
+});
+
 const mapDispatchToProps = {
   onGetCurretnUser: getCurrentUser,
 };
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

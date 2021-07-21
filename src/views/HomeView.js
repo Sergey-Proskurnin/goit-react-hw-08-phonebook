@@ -1,21 +1,28 @@
 import React from 'react';
 
+import bgiHome from 'images/sunset-london-england.jpg';
+import s from './Views.module.css';
+
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundImage: 'url(images/sunset-london-england.jpg)',
   },
   title: {
     fontWeight: 500,
     fontSize: 48,
     textAlign: 'center',
   },
+  bgi: {
+    backgroundImage: { bgiHome },
+  },
 };
 
 const HomeView = () => (
-  <div>
+  <div className={s.HomeContainer}>
     <h1 style={styles.title}>
       Приветственная страница нашего сервиса{' '}
       <span role="img" aria-label="Иконка приветствия">

@@ -11,7 +11,7 @@ import {
   // loginRequest,
   loginSuccess,
   loginError,
-  // getCurrentUserRequest,
+  getCurrentUserRequest,
   getCurrentUserSuccess,
   getCurrentUserError,
 } from './auth-actions';
@@ -48,10 +48,17 @@ const isLogin = createReducer(false, {
   [logoutSuccess]: () => false,
 });
 
+const isFetchigCurrentUser = createReducer(false, {
+  [getCurrentUserRequest]: () => true,
+  [getCurrentUserSuccess]: () => false,
+  [getCurrentUserError]: () => false,
+});
+
 const authReducer = combineReducers({
   user,
   isLogin,
   token,
   error,
+  isFetchigCurrentUser,
 });
 export { authReducer };

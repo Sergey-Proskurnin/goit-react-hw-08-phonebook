@@ -2,4 +2,6 @@ const getIsAuthenticated = state => state.auth.isLogin;
 
 const getUserName = state => state.auth.user.name;
 
-export { getIsAuthenticated, getUserName };
+const getFetchigCurrentUser = state => state.auth.isFetchigCurrentUser;
+
+export { getIsAuthenticated, getUserName, getFetchigCurrentUser };
