@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { logIn } from 'redux/auth';
+
+import s from './Views.module.css';
 
 const styles = {
   form: {
@@ -35,36 +38,38 @@ class LoginView extends Component {
     const { email, password } = this.state;
 
     return (
-      <div>
-        <h1>Страница логина</h1>
+      <div className={s.LoginContainer}>
+        <div className={s.LoginSection}>
+          <h1>Страница логина</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-          style={styles.form}
-          autoComplete="off"
-        >
-          <label style={styles.label}>
-            Почта
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
+          <form
+            onSubmit={this.handleSubmit}
+            style={styles.form}
+            autoComplete="off"
+          >
+            <label style={styles.label}>
+              Почта
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          <label style={styles.label}>
-            Пароль
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
+            <label style={styles.label}>
+              Пароль
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          <button type="submit">Войти</button>
-        </form>
+            <button type="submit">Войти</button>
+          </form>
+        </div>
       </div>
     );
   }

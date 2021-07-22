@@ -11,6 +11,7 @@ import ContactList from 'components/ContactList';
 import Container from 'components/Container';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { getLoading } from 'redux/contacts/contacts-selectors';
+import s from './Views.module.css';
 
 class ContactsView extends Component {
   static propTypes = {
@@ -23,18 +24,23 @@ class ContactsView extends Component {
 
   render() {
     return (
-      <Container title="Phonebook">
-        <ContactForm />
-        <h2 className="title">Contacts</h2>
-        {this.props.isLoadingContacts ? (
-          <OnLoader />
-        ) : (
-          <>
-            <Filter />
-            <ContactList />
-          </>
-        )}
-      </Container>
+      <div className={s.ContactsContainer}>
+        <Container title="Phonebook">
+          <ContactForm />
+        </Container>
+        <Container title="Contacts">
+          {/* <h2 className="title">Contacts</h2> */}
+
+          {this.props.isLoadingContacts ? (
+            <OnLoader />
+          ) : (
+            <>
+              <Filter />
+              <ContactList />
+            </>
+          )}
+        </Container>
+      </div>
     );
   }
 }

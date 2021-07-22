@@ -5,7 +5,7 @@ import AppBar from 'components/AppBar';
 // import HomeView from 'views/HomeView';
 // import RegisterView from 'views/RegisterView';
 // import LoginView from 'views/LoginView';
-import Container from './components/Container';
+// import Container from './components/Container';
 import { getCurrentUser, getFetchigCurrentUser } from 'redux/auth';
 import { connect } from 'react-redux';
 import routes from './routes';

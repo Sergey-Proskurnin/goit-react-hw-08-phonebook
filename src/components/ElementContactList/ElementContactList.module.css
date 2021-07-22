@@ -1,16 +1,17 @@
 .item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 10px;
   list-style-type: disc;
 }
 .span {
   display: block;
-  width: 5px;
-  height: 5px;
-  background-color: black;
-  border-radius: 50%;
+  margin-right: 20px;
+  /* width: 5px; */
+  /* height: 5px; */
+  /* background-color: black;
+  border-radius: 50%; */
 }
 .btnList {
   cursor: pointer;
@@ -20,12 +21,24 @@
   padding: 5px 5px;
   text-align: center;
   text-decoration: none;
-  background-color: #008cba;
+  background-color: #3f51b5;
   font-size: 16px;
   border-radius: 4px;
+  margin-left: 5px;
 }
 .btnList:hover,
 :focus {
-  color: #008cba;
+  color: #3f51b5;
   background-color: white;
+}
+
+.link {
+  text-decoration: none;
+  /* letter-spacing: 0.02em; */
+  color: white;
+}
+.link:hover,
+:focus {
+  color: #e84a5f;
+  /* background-color: white; */
 }

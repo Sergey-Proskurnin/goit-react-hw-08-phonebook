@@ -13,7 +13,7 @@ const styles = {
   },
   title: {
     fontWeight: 500,
-    fontSize: 48,
+    fontSize: 88,
     textAlign: 'center',
   },
   bgi: {
@@ -24,10 +24,10 @@ const styles = {
 const HomeView = () => (
   <div className={s.HomeContainer}>
     <h1 style={styles.title}>
-      Приветственная страница нашего сервиса{' '}
-      <span role="img" aria-label="Иконка приветствия">
+      Phonebook{' '}
+      {/* <span role="img" aria-label="Иконка приветствия">
         💁‍♀️
-      </span>
+      </span> */}
     </h1>
   </div>
 );

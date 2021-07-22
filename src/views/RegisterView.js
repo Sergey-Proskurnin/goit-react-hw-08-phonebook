@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { register } from 'redux/auth';
 
+import s from './Views.module.css';
+
 const styles = {
   form: {
     width: 320,
@@ -36,46 +38,48 @@ class RegisterView extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div>
-        <h1>Страница регистрации</h1>
+      <div className={s.RegisterContainer}>
+        <div className={s.RegisterSection}>
+          <h1>Страница регистрации</h1>
 
-        <form
-          onSubmit={this.handleSubmit}
-          style={styles.form}
-          autoComplete="off"
-        >
-          <label style={styles.label}>
-            Имя
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
+          <form
+            onSubmit={this.handleSubmit}
+            style={styles.form}
+            autoComplete="off"
+          >
+            <label style={styles.label}>
+              Имя
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          <label style={styles.label}>
-            Почта
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
+            <label style={styles.label}>
+              Почта
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          <label style={styles.label}>
-            Пароль
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
+            <label style={styles.label}>
+              Пароль
+              <input
+                type="password"
+                name="password"
+                value={password}
+                onChange={this.handleChange}
+              />
+            </label>
 
-          <button type="submit">Зарегистрироваться</button>
-        </form>
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+        </div>
       </div>
     );
   }

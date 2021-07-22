@@ -11,12 +11,14 @@
   text-decoration: none;
   padding: 12;
   font-weight: 700;
-  color: #2a363b;
+  color: #3f51b5;
+  /* color: #2a363b; */
 }
 
 .link:hover,
 .link:focus {
   text-decoration-line: underline;
+  background-color: inherit;
 }
 .activeLink {
   color: #e84a5f;

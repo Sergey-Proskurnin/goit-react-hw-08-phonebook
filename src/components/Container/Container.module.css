@@ -1,10 +1,13 @@
 .container {
-  max-width: 1200px;
-  padding: 0;
+  width: 1200px;
+  padding-top: 0px;
 
-  margin: 30px auto;
-  width: 420px;
+  margin: 120px auto;
+  width: 450px;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 .title {
   font-size: 38px;
+  margin-bottom: 20px;
 }
