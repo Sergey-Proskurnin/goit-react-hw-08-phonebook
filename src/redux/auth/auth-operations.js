@@ -1,3 +1,5 @@
+import alert from 'helpers/alert';
+
 import {
   registerRequest,
   registerSuccess,
@@ -29,6 +31,8 @@ const register = credentials => async dispatch => {
     dispatch(registerSuccess(response.data));
   } catch (error) {
     dispatch(registerError(error.message));
+    alert(`Incorrect login!
+    Server error: ${error.message}`);
   }
 };
 
@@ -40,6 +44,7 @@ const logIn = credentials => async dispatch => {
     dispatch(loginSuccess(response.data));
   } catch (error) {
     dispatch(loginError(error.message));
+    alert(`Incorrect login or password! Server error: ${error.message}`);
   }
 };
 
@@ -51,6 +56,7 @@ const logOut = () => async dispatch => {
     dispatch(logoutSuccess());
   } catch (error) {
     dispatch(logoutError(error.message));
+    alert(`Server error: ${error.message}`);
   }
 };
 
@@ -69,6 +75,7 @@ const getCurrentUser = () => async (dispatch, getState) => {
     dispatch(getCurrentUserSuccess(response.data));
   } catch (error) {
     dispatch(getCurrentUserError(error.message));
+    alert(`Server error: ${error.message}`);
   }
 };
 

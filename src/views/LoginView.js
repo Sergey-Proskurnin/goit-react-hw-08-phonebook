@@ -8,25 +8,6 @@ import { logIn } from 'redux/auth';
 
 import s from './Views.module.css';
 
-// const styles = {
-//   form: {
-//     width: 320,
-//   },
-//   label: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     marginBottom: 15,
-//   },
-// };
-const stylesFormControl = {
-  display: 'flex',
-  width: '300px',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  // margin: "0 auto",
-  color: 'white',
-};
-
 class LoginView extends Component {
   state = {
     email: '',
@@ -52,36 +33,7 @@ class LoginView extends Component {
       <div className={s.LoginContainer}>
         <div className={s.LoginSection}>
           <h1 className={s.LoginTitle}>Login</h1>
-          {/* 
-          <form
-            onSubmit={this.handleSubmit}
-            style={styles.form}
-            autoComplete="off"
-          >
-            <label style={styles.label}>
-              Почта
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-              />
-            </label>
-
-            <label style={styles.label}>
-              Пароль
-              <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={this.handleChange}
-              />
-            </label>
-
-            <button type="submit">Войти</button>
-          </form> */}
-
-          <FormControl style={stylesFormControl}>
+          <FormControl className={s.LoginFormControl}>
             <TextField
               style={{ marginTop: '20px' }}
               onChange={this.handleChange}

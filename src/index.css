@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 *,
@@ -12,17 +12,16 @@ html {
 body {
   font-family: 'Roboto';
   letter-spacing: 0.02em;
-  background-color: rgb(245, 235, 204);
+
+  background: linear-gradient(rgba(150, 154, 187, 0.9), rgba(47, 48, 58, 0.4)),
+    url('images/sunset-london-england.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(245, 235, 204);
-} */
+
 h1,
 h2,
 h3,
@@ -53,13 +52,24 @@ img {
 }
 
 ::-webkit-scrollbar {
-  /* 1 - скроллбар */
+  /* 1 - scrollbar */
   width: 4px;
   height: 4px;
   background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  /* 5 - ползунок */
+  /* 5 - slider */
   border-radius: 2px;
   background-color: #d1d1d1;
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    box-sizing: border-box;
+    width: 100vw;
+    overflow: hidden;
+  }
+  body {
+    background-color: rgb(245, 235, 204);
+  }
 }

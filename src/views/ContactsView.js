@@ -29,18 +29,16 @@ class ContactsView extends Component {
           <ContactForm />
         </Container>
         <Container title="Contacts">
-          {/* <h2 className="title">Contacts</h2> */}
-
           {this.props.isLoadingContacts ? (
             <OnLoader />
           ) : (
-            <>
+            <div className={s.contactContainer}>
               <Filter />
 
               <div className={s.contactList}>
                 <ContactList />
               </div>
-            </>
+            </div>
           )}
         </Container>
       </div>

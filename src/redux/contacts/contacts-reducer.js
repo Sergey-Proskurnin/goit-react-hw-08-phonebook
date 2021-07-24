@@ -40,8 +40,17 @@ const filter = createReducer('', {
   [changeFilter]: (_, action) => action.payload,
 });
 
+const setError = (_, { payload }) => payload;
+
+const error = createReducer(null, {
+  [fetchContacts.rejected]: setError,
+  [addContactError]: setError,
+  [deleteContactError]: setError,
+});
+
 export default combineReducers({
   items,
   filter,
   loading,
+  error,
 });

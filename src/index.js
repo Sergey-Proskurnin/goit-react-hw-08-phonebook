@@ -5,6 +5,9 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import '@fontsource/roboto';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/mobile/dist/PNotifyMobile.css';
+import '@pnotify/core/dist/BrightTheme.css';
 
 import './index.css';
 import App from './App';

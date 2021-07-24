@@ -1,23 +1,78 @@
 .HomeContainer {
-  background: linear-gradient(rgba(150, 154, 187, 0.9), rgba(47, 48, 58, 0.4)),
-    url('images/sunset-london-england.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* background-position: left top; */
-  background-attachment: fixed;
-
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  width: 100vw;
-  height: 100vh;
-
   color: #ffffff;
+  min-height: calc(100vh - 50px);
 }
+
+.HomeTitle {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+}
+.HomeArticle {
+  max-width: 400px;
+  margin-top: 30px;
+  margin-left: 50%;
+  margin-right: 10px;
+  text-indent: 5%;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.HomeArticleDescription {
+  font-size: 20px;
+  text-align: justify;
+}
+.HomeArticleSpan {
+  display: block;
+  font-size: 7px;
+  max-width: 300px;
+  margin-top: 10px;
+  margin-left: 30%;
+}
+
+.LoginSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 30vh;
+  color: #3f51b5;
+}
+.LoginFormControl {
+  width: 300px;
+}
+
+.RegisterSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 27vh;
+  color: #3f51b5;
+}
+.RegisterFormControl {
+  width: 300px;
+}
+
 @media screen and (min-width: 720px) {
+  .HomeContainer {
+    background: linear-gradient(rgba(150, 154, 187, 0.9), rgba(47, 48, 58, 0.4)),
+      url('images/sunset-london-england.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100vw;
+    height: 100vh;
+  }
+
   .ContactsContainer {
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('images/telefonnaya-budka-kniga-makro.jpg') no-repeat center center
@@ -27,55 +82,72 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* background-attachment: scroll; */
+    background-attachment: fixed;
+
     width: 100vw;
     height: 100vh;
-    /* overflow-y: hidden; */
     display: flex;
   }
-}
 
-.LoginContainer {
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('images/telefonnaya-budka-pticy.jpg') no-repeat center center fixed;
+  .LoginContainer {
+    background: linear-gradient(rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.6)),
+      url('images/telefonnaya-budka-pticy.jpg') no-repeat center center fixed;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
 
-  width: 100vw;
-  height: 100vh;
-}
+    width: 100vw;
+    height: 100vh;
+  }
 
-.RegisterContainer {
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('images/telefonnaya-budka-pticy.jpg') no-repeat center center fixed;
+  .RegisterContainer {
+    background: linear-gradient(rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.6)),
+      url('images/telefonnaya-budka-pticy.jpg') no-repeat center center fixed;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
 
-  width: 100vw;
-  height: 100vh;
-}
+    width: 100vw;
+    height: 100vh;
+  }
+  .HomeTitle {
+    font-size: 100px;
+    font-weight: 500;
+  }
 
-.LoginSection {
-  padding: 30vh 15vw;
-  color: #3f51b5;
-}
-.LoginTitle {
-  margin-left: 100px;
-}
-.RegisterSection {
-  padding: 30vh 65vw;
-  color: #3f51b5;
-}
-.RegisterTitle {
-  margin-left: 60px;
-}
+  .HomeArticle {
+    margin-top: 50px;
+  }
+  .HomeArticleDescription {
+    font-size: 32px;
+  }
+  .HomeArticleSpan {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 30%;
+  }
 
-.contactList {
-  color: tomato;
+  .contactContainer {
+    max-width: 560px;
+  }
+  .LoginSection {
+    align-items: flex-start;
+    padding: 15vw;
+  }
+  .LoginTitle {
+    margin-left: 100px;
+  }
+  .RegisterSection {
+    align-items: flex-end;
+    padding-right: 15vw;
+  }
+  .RegisterTitle {
+    margin-right: 60px;
+  }
 }

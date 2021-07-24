@@ -1,6 +1,12 @@
 .list {
-  /* margin-left: 30px; */
-  font-size: 20px;
+  font-size: 15px;
   text-align: start;
-  /* overflow-y: scroll; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 720px) {
+  .list {
+    font-size: 20px;
+  }
 }

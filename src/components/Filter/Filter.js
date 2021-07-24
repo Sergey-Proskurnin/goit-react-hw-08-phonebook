@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
 import { changeFilter, getFilter } from 'redux/contacts';
-// import { changeFilter } from 'redux/contacts/contacts-actions';
-// import { getFilter } from 'redux/contacts/contacts-selectors';
 
 const filterInputId = uuidv4();
 

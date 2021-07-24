@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import alert from 'helpers/alert';
 
 import s from './ContactForm.module.css';
 
 import { addContact, getAllContacts } from 'redux/contacts';
-// import { addContact } from 'redux/contacts/contacts-operations';
-// import { getAllContacts } from 'redux/contacts/contacts-selectors';
 
 class ContactForm extends Component {
   static defaultProps = {

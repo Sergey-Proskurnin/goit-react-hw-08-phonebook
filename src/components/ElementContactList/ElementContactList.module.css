@@ -3,27 +3,21 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  list-style-type: disc;
 }
 .span {
   display: block;
-  margin-right: 20px;
-  /* color: white; */
-  /* width: 5px; */
-  /* height: 5px; */
-  /* background-color: black;
-  border-radius: 50%; */
+  margin-right: 10px;
 }
 .btnList {
   cursor: pointer;
-  width: 70px;
+  width: 50px;
   border: none;
   color: white;
   padding: 5px 5px;
   text-align: center;
   text-decoration: none;
   background-color: #3f51b5;
-  font-size: 16px;
+  font-size: 10px;
   border-radius: 4px;
   margin-left: 5px;
 }
@@ -32,7 +26,6 @@
   color: #3f51b5;
   background-color: white;
 }
-
 .link {
   display: flex;
   align-items: center;
@@ -42,9 +35,14 @@
 .link:hover,
 :focus {
   color: #e84a5f;
-  /* background-color: white; */
 }
-
 .spanLink {
   display: block;
+}
+
+@media screen and (min-width: 720px) {
+  .btnList {
+    width: 70px;
+    font-size: 16px;
+  }
 }

@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import { getIsAuthenticated } from 'redux/auth';
 
 /**
- * - Если маршрут приватный и пользователь залогинен, рендерит компонент
- * - В противном случае рендерит Redirect на /login
+ * - If the route is private and the user is logged in, render the component
+ * - Otherwise, render Redirect to / login
  */
 const PrivateRoute = ({
   component: Component,
