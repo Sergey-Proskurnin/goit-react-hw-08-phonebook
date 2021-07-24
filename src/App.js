@@ -6,7 +6,11 @@ import AppBar from 'components/AppBar';
 // import RegisterView from 'views/RegisterView';
 // import LoginView from 'views/LoginView';
 // import Container from './components/Container';
-import { getCurrentUser, getFetchigCurrentUser } from 'redux/auth';
+import {
+  getCurrentUser,
+  getFetchigCurrentUser,
+  getCurrentToken,
+} from 'redux/auth';
 import { connect } from 'react-redux';
 import routes from './routes';
 import PrivateRoute from 'components/PriveteRoute';
@@ -28,7 +32,7 @@ const ContactsView = lazy(() =>
 
 class App extends Component {
   componentDidMount() {
-    this.props.onGetCurretnUser();
+    this.props.isToken && this.props.onGetCurretnUser();
   }
 
   render() {
@@ -75,6 +79,7 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   isFetchigCurrentUser: getFetchigCurrentUser(state),
+  isToken: getCurrentToken(state),
 });
 
 const mapDispatchToProps = {
