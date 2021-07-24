@@ -51,3 +51,15 @@ img {
 .NavLink--active {
   color: palevioletred;
 }
+
+::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  /* 5 - ползунок */
+  border-radius: 2px;
+  background-color: #d1d1d1;
+}

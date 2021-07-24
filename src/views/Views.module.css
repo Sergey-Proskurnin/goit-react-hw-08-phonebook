@@ -1,5 +1,5 @@
 .HomeContainer {
-  background: linear-gradient(rgba(47, 48, 58, 0.3), rgba(47, 48, 58, 0.3)),
+  background: linear-gradient(rgba(150, 154, 187, 0.9), rgba(47, 48, 58, 0.4)),
     url('images/sunset-london-england.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -17,21 +17,22 @@
 
   color: #ffffff;
 }
+@media screen and (min-width: 720px) {
+  .ContactsContainer {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('images/telefonnaya-budka-kniga-makro.jpg') no-repeat center center
+        fixed;
 
-.ContactsContainer {
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('images/telefonnaya-budka-kniga-makro.jpg') no-repeat center center
-      fixed;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-attachment: scroll; */
+    width: 100vw;
+    height: 100vh;
+    /* overflow-y: hidden; */
+    display: flex;
+  }
 }
 
 .LoginContainer {
@@ -61,9 +62,20 @@
 }
 
 .LoginSection {
-  padding: 40vh 15vw;
+  padding: 30vh 15vw;
+  color: #3f51b5;
 }
-
+.LoginTitle {
+  margin-left: 100px;
+}
 .RegisterSection {
   padding: 30vh 65vw;
+  color: #3f51b5;
+}
+.RegisterTitle {
+  margin-left: 60px;
+}
+
+.contactList {
+  color: tomato;
 }

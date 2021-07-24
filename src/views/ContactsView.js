@@ -36,7 +36,10 @@ class ContactsView extends Component {
           ) : (
             <>
               <Filter />
-              <ContactList />
+
+              <div className={s.contactList}>
+                <ContactList />
+              </div>
             </>
           )}
         </Container>

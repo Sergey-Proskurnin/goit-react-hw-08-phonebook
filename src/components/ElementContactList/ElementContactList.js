@@ -8,11 +8,13 @@ const ElementContactList = ({ contacts, deleteContact }) => {
   return contacts.map(({ name, number, id }) => {
     return (
       <li className={s.item} key={id}>
-        <span className={s.span}>
-          <ContactPhoneIcon color="primary" fontSize="large" />
-        </span>
         <a className={s.link} href={`tel:${number}`}>
-          {name}: {number}
+          <span className={s.span}>
+            <ContactPhoneIcon color="primary" fontSize="large" />
+          </span>
+          <span className={s.spanLink}>
+            {name}: {number}
+          </span>
         </a>
         <button
           type="button"

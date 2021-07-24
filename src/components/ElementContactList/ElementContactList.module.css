@@ -1,13 +1,14 @@
 .item {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 10px;
   list-style-type: disc;
 }
 .span {
   display: block;
   margin-right: 20px;
+  /* color: white; */
   /* width: 5px; */
   /* height: 5px; */
   /* background-color: black;
@@ -33,12 +34,17 @@
 }
 
 .link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  /* letter-spacing: 0.02em; */
   color: white;
 }
 .link:hover,
 :focus {
   color: #e84a5f;
   /* background-color: white; */
+}
+
+.spanLink {
+  display: block;
 }
