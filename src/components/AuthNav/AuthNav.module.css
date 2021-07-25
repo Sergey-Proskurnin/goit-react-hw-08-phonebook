@@ -7,6 +7,7 @@
 }
 
 .link {
+  font-size: 16px;
   display: inline-block;
   text-decoration: none;
   padding: 12;
@@ -25,4 +26,10 @@
 
 .ItemAuth {
   margin-right: 40px;
+}
+
+@media screen and (min-width: 720px) {
+  .link {
+    font-size: 23px;
+  }
 }

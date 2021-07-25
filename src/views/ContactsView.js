@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { CSSTransition } from 'react-transition-group';
+
 import OnLoader from 'components/OnLoader';
-
-// import '../App.css';
-
 import ContactForm from 'components/ContactForm';
-import Filter from 'components/Filter';
-import ContactList from 'components/ContactList';
 import Container from 'components/Container';
+import ContactContainer from 'components/ContactContainer';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { getLoading } from 'redux/contacts/contacts-selectors';
+
 import s from './Views.module.css';
+import sAl from 'helpers/animation/animationLeft.module.css';
+import sAr from 'helpers/animation/animationRight.module.css';
 
 class ContactsView extends Component {
   static propTypes = {
@@ -26,19 +27,30 @@ class ContactsView extends Component {
     return (
       <div className={s.ContactsContainer}>
         <Container title="Phonebook">
-          <ContactForm />
+          <CSSTransition
+            in={true}
+            appear={true}
+            timeout={250}
+            classNames={sAl}
+            unmountOnExit
+          >
+            <ContactForm />
+          </CSSTransition>
         </Container>
+
         <Container title="Contacts">
           {this.props.isLoadingContacts ? (
             <OnLoader />
           ) : (
-            <div className={s.contactContainer}>
-              <Filter />
-
-              <div className={s.contactList}>
-                <ContactList />
-              </div>
-            </div>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={500}
+              classNames={sAr}
+              unmountOnExit
+            >
+              <ContactContainer />
+            </CSSTransition>
           )}
         </Container>
       </div>

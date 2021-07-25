@@ -35,30 +35,6 @@
   margin-left: 30%;
 }
 
-.LoginSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding-top: 30vh;
-  color: #3f51b5;
-}
-.LoginFormControl {
-  width: 300px;
-}
-
-.RegisterSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding-top: 27vh;
-  color: #3f51b5;
-}
-.RegisterFormControl {
-  width: 300px;
-}
-
 @media screen and (min-width: 720px) {
   .HomeContainer {
     background: linear-gradient(rgba(150, 154, 187, 0.9), rgba(47, 48, 58, 0.4)),
@@ -131,23 +107,5 @@
     font-size: 15px;
     margin-top: 20px;
     margin-left: 30%;
-  }
-
-  .contactContainer {
-    max-width: 560px;
-  }
-  .LoginSection {
-    align-items: flex-start;
-    padding: 15vw;
-  }
-  .LoginTitle {
-    margin-left: 100px;
-  }
-  .RegisterSection {
-    align-items: flex-end;
-    padding-right: 15vw;
-  }
-  .RegisterTitle {
-    margin-right: 60px;
   }
 }

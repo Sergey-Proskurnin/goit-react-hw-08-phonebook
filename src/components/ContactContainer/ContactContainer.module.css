@@ -1,0 +1,21 @@
+@media screen and (min-width: 720px) {
+  .ContactsContainer {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('images/telefonnaya-budka-kniga-makro.jpg') no-repeat center center
+        fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+
+  .contactContainer {
+    max-width: 560px;
+  }
+}
